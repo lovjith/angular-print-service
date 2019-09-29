@@ -3,7 +3,11 @@
     <h1>
       Welcome to {{ title }}!
     </h1>
-    <button (click)="onPrintInvoice()">PRINT INVOICE</button>
+    <h3>
+      <a [routerLink]="['/invoice']">
+        Invoice
+      </a>
+    </h3>
   </div>
   <router-outlet></router-outlet>
   <router-outlet name="print"></router-outlet>

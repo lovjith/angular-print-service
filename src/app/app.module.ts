@@ -3,19 +3,18 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { PrintLayoutComponent } from './print-layout/print-layout.component';
-import { InvoicePrintComponent } from './invoice/print/invoice-print.component';
 import { PrintService } from './print.service';
+import { PrintLayoutModule } from './print-layout/print-layout.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PrintLayoutComponent,
-    InvoicePrintComponent
+    // InvoicePrintComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    PrintLayoutModule
   ],
   providers: [PrintService],
   bootstrap: [AppComponent]

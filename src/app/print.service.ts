@@ -6,18 +6,20 @@ import { Router } from '@angular/router';
 })
 export class PrintService {
   isPrinting = false;
+  private documentName: string;
 
   constructor(private router: Router) { }
 
   printDocument(documentName: string, documentData: string[]) {
+    this.documentName = documentName;
     this.isPrinting = true;
     this.router.navigate(
-      ['/',
-        {
-          outlets: {
-            'print': ['print', documentName, documentData.join()]
-          }
+      [this.documentName + '/',
+      {
+        outlets: {
+          'print': ['print', documentName, documentData.join()]
         }
+      }
       ]
     );
   }
@@ -26,7 +28,7 @@ export class PrintService {
     setTimeout(() => {
       window.print();
       this.isPrinting = false;
-      this.router.navigate([{ outlets: { print: null } }]);
+      this.router.navigate([this.documentName + '/', { outlets: { print: null } }]);
     });
   }
 }

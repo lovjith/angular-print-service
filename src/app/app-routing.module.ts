@@ -1,17 +1,16 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { InvoicePrintComponent } from './invoice/print/invoice-print.component';
-import { PrintLayoutComponent } from './print-layout/print-layout.component';
 
 const routes: Routes = [
-  {
-    path: 'print',
-    outlet: 'print',
-    component: PrintLayoutComponent,
-    children: [
-      { path: 'invoice/:invoiceIds', component: InvoicePrintComponent }
-    ]
-  }
+  // {
+  //   path: 'print',
+  //   outlet: 'print',
+  //   component: PrintLayoutComponent,
+  //   children: [
+  //     { path: 'invoice-print/:invoiceIds', component: InvoicePrintComponent }
+  //   ],
+  // },
+  { path: 'invoice', loadChildren: './invoice/invoice.module#InvoiceModule' },
 ];
 
 @NgModule({
