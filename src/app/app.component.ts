@@ -7,7 +7,7 @@ import {PrintService} from './print.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'angular-print-service';
+  title = 'Angular print service';
 
   constructor(public printService: PrintService) { }
 
