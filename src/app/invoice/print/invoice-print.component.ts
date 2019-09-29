@@ -3,11 +3,11 @@ import { ActivatedRoute } from '@angular/router';
 import { PrintService } from '../../print.service';
 
 @Component({
-  selector: 'app-invoice',
+  selector: 'app-invoice-print',
   templateUrl: './invoice-print.component.html',
   styleUrls: ['./invoice-print.component.css']
 })
-export class InvoiceComponent implements OnInit {
+export class InvoicePrintComponent implements OnInit {
   invoiceIds: string[];
   invoiceDetails: Promise<any>[];
 

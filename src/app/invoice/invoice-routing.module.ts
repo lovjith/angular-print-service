@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { InvoicePrintComponent } from './invoice/print/invoice-print.component';
-import { PrintLayoutComponent } from './print-layout/print-layout.component';
+import { PrintLayoutComponent } from '../print-layout/print-layout.component';
+import { InvoicePrintComponent } from './print/invoice-print.component';
 
 const routes: Routes = [
   {
@@ -15,7 +15,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class InvoiceRoutingModule { }
