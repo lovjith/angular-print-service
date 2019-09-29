@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { InvoiceComponent } from './invoice/invoice.component';
+import { InvoiceComponent } from './invoice/print/invoice-print.component';
 import { PrintLayoutComponent } from './print-layout/print-layout.component';
 
 const routes: Routes = [
