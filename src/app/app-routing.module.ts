@@ -1,10 +1,11 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import {InvoiceComponent} from './invoice/invoice.component';
-import {PrintLayoutComponent} from './print-layout/print-layout.component';
+import { InvoiceComponent } from './invoice/invoice.component';
+import { PrintLayoutComponent } from './print-layout/print-layout.component';
 
 const routes: Routes = [
-  { path: 'print',
+  {
+    path: 'print',
     outlet: 'print',
     component: PrintLayoutComponent,
     children: [

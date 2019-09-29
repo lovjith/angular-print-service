@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {ActivatedRoute} from '@angular/router';
-import {PrintService} from '../print.service';
+import { ActivatedRoute } from '@angular/router';
+import { PrintService } from '../print.service';
 
 @Component({
   selector: 'app-invoice',
@@ -12,9 +12,8 @@ export class InvoiceComponent implements OnInit {
   invoiceDetails: Promise<any>[];
 
   constructor(route: ActivatedRoute,
-              private printService: PrintService) {
-    this.invoiceIds = route.snapshot.params['invoiceIds']
-      .split(',');
+    private printService: PrintService) {
+    this.invoiceIds = route.snapshot.params['invoiceIds'].split(',');
   }
 
   ngOnInit() {
@@ -27,7 +26,7 @@ export class InvoiceComponent implements OnInit {
   getInvoiceDetails(invoiceId) {
     const amount = Math.floor((Math.random() * 100));
     return new Promise(resolve =>
-      setTimeout(() => resolve({amount}), 1000)
+      setTimeout(() => resolve({ amount }), 1000)
     );
   }
 
