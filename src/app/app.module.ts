@@ -9,7 +9,6 @@ import { PrintLayoutModule } from './print-layout/print-layout.module';
 @NgModule({
   declarations: [
     AppComponent,
-    // InvoicePrintComponent
   ],
   imports: [
     BrowserModule,
