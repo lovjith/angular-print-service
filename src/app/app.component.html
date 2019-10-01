@@ -3,9 +3,22 @@
     <h1>
       Welcome to {{ title }}!
     </h1>
+
     <h3>
       <a [routerLink]="['/invoice']">
         Invoice
+      </a>
+    </h3>
+
+    <h3>
+      <a [routerLink]="['/invoice/original']">
+        Original Invoice
+      </a>
+    </h3>
+
+    <h3>
+      <a [routerLink]="['/invoice/duplicate']">
+        Duplicate Invoice
       </a>
     </h3>
   </div>
